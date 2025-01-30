@@ -1,7 +1,22 @@
-
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const SavedAddress = () => {
-  
+  const [addresses, setAddresses] = useState([]);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    fetchAddresses();
+  }, []);
+
+  const fetchAddresses = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/addresses");
+      setAddresses(response.data);
+    } catch (err) {
+      console.error("Error fetching addresses", err);
+    }
+  };
 
   return (
     <div className="card bg-base-100 shadow-xl p-6">
