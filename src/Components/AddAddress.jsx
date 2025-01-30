@@ -15,7 +15,24 @@ const AddAddress = ({ fetchAddresses }) => {
     }
   };
 
-  
+  const fetchAddressDetails = async (pinCode) => {
+    if (pinCode.length === 6) {
+      try {
+        const response = await axios.get(`https://api.postalpincode.in/pincode/${pinCode}`);
+        const details = response.data[0];
+        if (details.Status === "Success") {
+          const { District, State } = details.PostOffice[0];
+          setValue("city", District);
+          setValue("state", State);
+          setError("");
+        } else {
+          setError("Invalid PIN Code");
+        }
+      } catch (err) {
+        setError("Error fetching address details");
+      }
+    }
+  };
 
   return (
     <div className="card bg-base-100 shadow-xl p-6 mb-6">
