@@ -1,8 +1,69 @@
-# React + Vite
+Smart Address Book - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Project Overview
 
-Currently, two official plugins are available:
+This is the frontend of the Smart Address Book, a React-based web application that allows users to add, view, and search for addresses. The app features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Address Form with PIN code auto-fill for city & state.
+
+Saved Addresses Table with a search bar for filtering by city/state.
+
+DaisyUI & TailwindCSS for responsive UI.
+
+SweetAlert2 for success notifications.
+
+API integration for auto-filling city/state based on PIN code.
+
+🛠️ Tech Stack & Dependencies
+
+React 18 - UI framework
+
+React Hook Form - Form handling
+
+Axios - API requests
+
+TailwindCSS & DaisyUI - Styling & responsiveness
+
+SweetAlert2 - Success alerts
+
+📌 Prerequisites
+
+Ensure you have the following installed:
+
+Node.js (>= 16.0.0)
+
+npm or yarn
+
+🔧 Installation & Setup
+
+Follow these steps to run the project locally:
+
+1️⃣ Clone the repository:
+
+ git clone <repository-url>
+ cd repository
+
+2️⃣ Install dependencies:
+
+npm install
+# OR
+yarn install
+
+3️⃣ Start the development server:
+
+npm run dev
+# OR
+yarn dev
+
+4️⃣ Open in Browser:
+Go to http://localhost:5173/ (if using Vite) or the displayed local server URL.
+
+🎯 Features
+
+Auto-fill city & state using a working PIN code API.
+
+Search saved addresses by city or state.
+
+Responsive design for mobile, tablet, and desktop.
+
+Real-time alerts for successful address addition.
