@@ -1,7 +1,19 @@
-
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useState } from "react";
 
 const AddAddress = ({ fetchAddresses }) => {
-  
+  const { register, handleSubmit, setValue } = useForm();
+  const [error, setError] = useState("");
+
+  const onSubmit = async (data) => {
+    try {
+      await axios.post("http://localhost:5000/add-address", data);
+      fetchAddresses();
+    } catch (err) {
+      console.error("Error saving address", err);
+    }
+  };
 
   
 
