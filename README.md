@@ -1,6 +1,7 @@
-Smart Address Book - Frontend
+# Smart Address Book - Frontend
+## live link: https://smart-address-book.netlify.app/
 
-🚀 Project Overview
+## 🚀 Project Overview
 
 This is the frontend of the Smart Address Book, a React-based web application that allows users to add, view, and search for addresses. The app features:
 
@@ -14,9 +15,9 @@ SweetAlert2 for success notifications.
 
 API integration for auto-filling city/state based on PIN code.
 
-🛠️ Tech Stack & Dependencies
+## 🛠️ Tech Stack & Dependencies
 
-React 18 - UI framework
+React - UI framework
 
 React Hook Form - Form handling
 
@@ -34,26 +35,29 @@ Node.js (>= 16.0.0)
 
 npm or yarn
 
-🔧 Installation & Setup
+## 🔧 Installation & Setup
 
 Follow these steps to run the project locally:
 
 1️⃣ Clone the repository:
-
+```
  git clone <repository-url>
  cd repository
+```
 
 2️⃣ Install dependencies:
-
+```
 npm install
-# OR
+## OR
 yarn install
+```
 
 3️⃣ Start the development server:
-
+```
 npm run dev
-# OR
+## OR
 yarn dev
+```
 
 4️⃣ Open in Browser:
 Go to http://localhost:5173/ (if using Vite) or the displayed local server URL.
