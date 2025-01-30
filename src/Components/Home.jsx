@@ -3,7 +3,7 @@ import SavedAddress from "./SavedAddress";
 
 const Home = () => {
   return (
-    <div>
+    <div className="container mx-auto p-4">
       <AddAddress></AddAddress>
       <SavedAddress></SavedAddress>
     </div>

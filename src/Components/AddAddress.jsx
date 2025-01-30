@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const AddAddress = ({ fetchAddresses }) => {
   const { register, handleSubmit, setValue } = useForm();
@@ -8,8 +9,14 @@ const AddAddress = ({ fetchAddresses }) => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post("http://localhost:5000/add-address", data);
+      await axios.post("https://smart-book-server-arittro7-arittros-projects.vercel.app/add-address", data);
       fetchAddresses();
+      Swal.fire({
+        title: "Success!",
+        text: "Address added successfully.",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
     } catch (err) {
       console.error("Error saving address", err);
     }
