@@ -10,7 +10,7 @@ const AddAddress = ({ fetchAddresses }) => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post("https://smart-book-server-arittro7-arittros-projects.vercel.app/add-address", data);
+      await axios.post("https://smart-book-server.vercel.app/add-address", data);
       fetchAddresses();
       Swal.fire({
         title: "Success!",

@@ -12,7 +12,7 @@ const SavedAddress = () => {
 
   const fetchAddresses = async () => {
     try {
-      const response = await axios.get("https://smart-book-server-arittro7-arittros-projects.vercel.app/addresses");
+      const response = await axios.get("https://smart-book-server.vercel.app/addresses");
       setAddresses(response.data);
     } catch (err) {
       console.error("Error fetching addresses", err);
